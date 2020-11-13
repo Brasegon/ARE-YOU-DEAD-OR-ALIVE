@@ -1,0 +1,47 @@
+.view,body,html{height:100%}.navbar{background-color:rgba(0,0,0,.2)}.page-footer,.top-nav-collapse{background-color:#1C2331}@media only screen and (max-width:768px){.navbar{background-color:#1C2331}}
+
+
+.navbar
+{
+  position : absolute;
+}
+
+.topnav a:hover {
+  border-bottom: 3px solid  #F82249;
+}
+
+.nav-link
+{
+  color : white;
+}
+
+@font-face
+{
+  font-family: "title";
+  src: url("../../assets/Androgyne_TB.otf") format("woff2");
+}
+
+
+
+img {
+  height: 70px;
+  width: 70px;
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+      background: #1C2331!important;
+  }
+}
+
+@media (max-width: 330px)
+{
+  .navbar-brand
+  {
+    font-size: 17px;
+  }
+}
+.navbar-brand
+{
+  font-family: "title";
+}
