@@ -100,7 +100,17 @@ p {
 }
 
 .searchTerm:focus{
-  color: #F82249;
+  color: black;
+}
+
+h4
+{
+  text-align: center;
+}
+
+span
+{
+  color : #F82249;
 }
 
 .searchButton {

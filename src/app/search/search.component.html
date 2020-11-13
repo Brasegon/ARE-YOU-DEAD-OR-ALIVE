@@ -8,15 +8,24 @@
 
     <div class="wrap">
       <div class="search">
-         <input type="text" class="searchTerm" placeholder="Try with '25544'">
-         <button type="submit" class="searchButton">
+         <input type="text" class="searchTerm" id="search" placeholder="Try with '25544'" required>
+         <button type="submit" (click)="print_satellite()" class="searchButton" >
            <i class="fa fa-search"></i>
         </button>
       </div>
    </div>
 
 	<div class="satellite">
-
+  <div *ngIf= "this.isPrinted === true">
+  <h4>- Result -</h4>
+  <h5>Name : <span id="name">{{this.name}}</span></h5>
+  <h5>ID : <span id="id">{{this.id}}</span></h5>
+  <h5>Latitude : <span id="latitude">{{this.latitude}}</span></h5>
+  <h5>Longitude : <span id="longitude">{{this.longitude}}</span></h5>
+  <h5>Height(km): <span id="height">{{this.height}}</span></h5>
+  <h5>Velocity(km/h) : <span id="velocity">{{this.velocity}}</span></h5>
+  <h5>Date : <span id="date">{{this.date}}</span></h5>
+	</div>
 	</div>
 </div>
 
