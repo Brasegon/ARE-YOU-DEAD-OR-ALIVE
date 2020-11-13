@@ -1,0 +1,22 @@
+
+@font-face
+{
+  font-family: "title";
+  src: url("../../assets/Androgyne_TB.otf") format("woff2");
+}
+
+
+#last_title
+{
+  font-family: "title";
+}
+
+.page-footer
+{
+  padding-top: 0;
+}
+
+img
+{
+  height: 150px;
+}

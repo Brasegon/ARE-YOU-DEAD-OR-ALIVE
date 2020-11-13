@@ -130,7 +130,7 @@ img {
     font-family: "title";
     position : relative;
     color : white;
-    font-size: 10px;
+    font-size: 13px;
     top : 26%;
     text-align: center;
   }
@@ -138,8 +138,8 @@ img {
 {
   font-family: "title";
   position : relative;
-  font-size: 40px;
-  color : #F39C12;
+  font-size: 50px;
+  color :  #F82249;
   top : 25%;
   text-align: center;
 }
@@ -147,7 +147,7 @@ img {
 a {
   font-size: 0.8rem;
   padding: 1rem 3rem;
-  color: #F39C12;
+  color:  #F82249;
   text-transform: uppercase;
 }
  }
@@ -160,6 +160,7 @@ a {
     font-size: 35px;
   }
 }
+
 
 *
 {
@@ -201,6 +202,7 @@ input, button
     background-color: transparent;
 }
 
+
 #cover
 {
     position: absolute;
@@ -216,6 +218,16 @@ input, button
     transform: scale(0.6);
 }
 
+
+@media (max-width: 500px)
+{
+  #cover
+{
+
+    width: 350px;
+}
+
+}
 form
 {
     height: 96px;

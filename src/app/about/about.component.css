@@ -1,0 +1,93 @@
+@font-face
+{
+  font-family: "under_title";
+  src: url("../../assets/BebasNeue-Regular.woff2") format("woff2");
+}
+
+.desc
+{
+  position: relative;
+  top : 25%;
+  text-align: center;
+}
+
+.col-sm-12
+{
+  margin-bottom: 20%;
+}
+
+.why
+{
+background-color: #e5e5e5;
+}
+
+.mob_text
+{
+  position: relative;
+  top : 15%;
+}
+
+.bi-phone
+{
+  position: relative;
+  left : 33%;
+}
+
+.mob
+{
+  padding-top: 2%;
+background-color: #e5e5e5;
+padding-bottom: 4%;
+}
+
+.mob_text span
+{
+  color : #F82249;
+}
+
+.ct2
+{
+  text-align: center;
+  color : #382526;
+  font-weight: bold;
+}
+
+.how
+{
+  margin-top: 1%;
+
+  padding-bottom: 6%;
+}
+
+h2
+{
+  padding-top: 3%;
+  margin-bottom: 3%;
+  font-weight: bold;
+
+  text-align: center;
+  font-size: 35px;
+}
+
+p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+@media (max-width: 450px)
+{
+  .mob
+  {
+    padding-bottom: 10%;
+  }
+}
+
+
+@media (max-width: 350px)
+{
+  #tel
+  {
+    left : -7%;
+  }
+}
