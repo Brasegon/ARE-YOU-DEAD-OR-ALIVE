@@ -8,9 +8,9 @@
         <div id="cover">
           <form method="get" action="">
             <div class="tb">
-              <div class="td"><input type="text" placeholder="Try with '25544'" required></div>
+              <div class="td"><input type="text" id="search" placeholder="Try with '25544'" required></div>
               <div class="td" id="s-cover">
-                <button type="submit">
+                <button (click)="search()" type="submit"  routerLink="/search">
                   <div id="s-circle"></div>
                   <span></span>
                 </button>

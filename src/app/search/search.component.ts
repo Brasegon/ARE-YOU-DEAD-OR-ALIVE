@@ -19,8 +19,17 @@ export class SearchComponent implements OnInit {
   latitude = '60';
 
   ngOnInit(): void {
+    this.id = window.history.state.search;
+    console.log(this.id);
+    if (this.id !== undefined) {
+      this.print_satellite_from_home(this.id);
+    }
   }
 
+  print_satellite_from_home(id)
+  {
+    this.isPrinted = true;
+  }
   // tslint:disable-next-line:typedef
   print_satellite() {
       this.id = (<HTMLInputElement>document.getElementById("search")).value;
