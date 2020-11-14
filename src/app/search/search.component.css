@@ -40,7 +40,9 @@ p {
 	position: relative;
 	width: 550px;
 	max-width: 100%;
-	text-align: center;
+  text-align: center;
+  margin-top: 5%;
+
 }
 
 @media (max-width: 450px)
