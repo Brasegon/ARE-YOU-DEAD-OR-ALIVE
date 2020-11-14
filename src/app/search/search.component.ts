@@ -40,6 +40,7 @@ export class SearchComponent implements OnInit {
   // tslint:disable-next-line:typedef
   print_satellite() {
       this.id = (<HTMLInputElement>document.getElementById("search")).value;
+      this.auth.search(this.id);
       this.isPrinted = true;
 
   }

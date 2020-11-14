@@ -16,19 +16,8 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  register(credentials): Observable<any> {
-    return this.http.post(AUTH_API + 'register', {
-      username: credentials.username,
-      email: credentials.email,
-      password: credentials.password,
-      gender: credentials.gender
-    }, httpOptions)
-  }
-  login(credentials): Observable<any> {
-    return this.http.post(AUTH_API + 'login', {
-      email: credentials.email,
-      password: credentials.password
-    }, httpOptions)
+  search(credentials): Observable<any> {
+    return this.http.get(AUTH_API + 'getSatInfo?id=' + credentials.id);
   }
 
   handleError(error) {
