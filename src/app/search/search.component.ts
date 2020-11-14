@@ -13,12 +13,16 @@ export class SearchComponent implements OnInit {
 
   isPrinted = false;
   id;
-  name = "iss";
-  height = '30';
-  velocity = '40';
-  date = '2018';
-  longitude = '50';
-  latitude = '60';
+  name;
+  height;
+  velocity;
+  date;
+  longitude;
+  latitude;
+  orbitType;
+  type;
+  elevation;
+  azimuth;
 
   ngOnInit(): void {
     this.id = window.history.state.search;
@@ -28,6 +32,7 @@ export class SearchComponent implements OnInit {
     }
   }
 
+  // tslint:disable-next-line:typedef
   print_satellite_from_home(id)
   {
     this.isPrinted = true;
@@ -36,5 +41,6 @@ export class SearchComponent implements OnInit {
   print_satellite() {
       this.id = (<HTMLInputElement>document.getElementById("search")).value;
       this.isPrinted = true;
+
   }
 }
