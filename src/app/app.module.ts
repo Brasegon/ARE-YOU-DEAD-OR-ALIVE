@@ -8,6 +8,8 @@ import { BackgroundComponent } from './background/background.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
+import { HttpClientModule } from '@angular/common/http';
+import { authInterceptorProviders } from './api/request/helper.service';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,14 @@ import { SearchComponent } from './search/search.component';
     BackgroundComponent,
     AboutComponent,
     FooterComponent,
-    SearchComponent
+    SearchComponent,
+    HttpClientModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
