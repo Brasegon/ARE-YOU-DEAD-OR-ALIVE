@@ -29,14 +29,12 @@ module.exports = (function () {
     async function getInfo(req, res) {
         var i = 0;
         var find = false;
-        var id = req.body.id;
+        var id = req.query.id;
         fs.createReadStream( './test.txt' )
         .pipe( new TLE.Parser() )
         .on( 'data', async function( tle ) {
             if (id === tle.number.toString() && find === false) {
                 var tles = [tle.line1, tle.line2]
-                // var test = tle.name + '\n' + tle.line1 + "\n" + tle.line2;
-                // console.log(test);
                 find = true;
                 //var info = await getGroundTracks({tle: test ,startTimeMS : Date.now(), stepMS: 6000000,
                     // isLngLatFormat: true});
