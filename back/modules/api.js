@@ -2,10 +2,10 @@ module.exports = (function () {
     "use strict";
     
     function launchApi(app) {
-        // app.post("/login", (req, res) =>{
-        //     var login = require('./login/login.js');
-        //     login.login(req, res);
-        // });
+        app.get("/getSatInfo", (req, res) =>{
+            var sat = require('./sat.js');
+            sat.getInfo(req, res);
+        });
     }
 
     return {
