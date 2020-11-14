@@ -28,7 +28,6 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = window.history.state.search;
-    console.log(this.id);
     if (this.id !== undefined) {
       this.print_satellite_from_home(this.id);
     }
