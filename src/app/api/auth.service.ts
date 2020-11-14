@@ -17,7 +17,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   search(credentials): Observable<any> {
-    return this.http.get(AUTH_API + 'getSatInfo?id=' + credentials.id);
+    return this.http.get(AUTH_API + 'getSatInfo?id=' + credentials);
   }
 
   handleError(error) {

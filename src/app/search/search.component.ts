@@ -33,14 +33,15 @@ export class SearchComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  print_satellite_from_home(id)
+  async print_satellite_from_home(id)
   {
+    const info = await this.auth.search(this.id).toPromise();
     this.isPrinted = true;
   }
   // tslint:disable-next-line:typedef
-  print_satellite() {
+  async print_satellite() {
       this.id = (<HTMLInputElement>document.getElementById("search")).value;
-      this.auth.search(this.id);
+      const info = await this.auth.search(this.id).toPromise();
       this.isPrinted = true;
 
   }

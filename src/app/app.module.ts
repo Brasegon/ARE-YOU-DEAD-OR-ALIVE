@@ -19,11 +19,11 @@ import { authInterceptorProviders } from './api/request/helper.service';
     AboutComponent,
     FooterComponent,
     SearchComponent,
-    HttpClientModule
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
