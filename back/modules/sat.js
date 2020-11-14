@@ -10,17 +10,18 @@ module.exports = (function () {
 
     function getOrbitType(height) {
         if (height < 2000) {
-            return ("LEO")
+            return ("LEO (Orbite Basse)")
         } else if (height > 2000 && height < 23000) {
-            return ("MEO")
+            return ("MEO (Orbite moyenne)")
         } else {
-            return ("GEO");
+            return ("GEO (Orbite Géostationnaire)");
         }
     }
     function getType(name) {
-        if (name.search("DEB")) {
+        console.log(name.search("DEB"));
+        if (name.search("DEB") > 0) {
             return ("Débris");
-        } else if (name.search("R/B")) {
+        } else if (name.search("R/B") > 0) {
             return ("Etage de fusée");
         } else {
             return ("Satellite");
@@ -32,18 +33,21 @@ module.exports = (function () {
         var id = req.query.id;
         fs.createReadStream( './test.txt' )
         .pipe( new TLE.Parser() )
-        .on( 'data', async function( tle ) {
+        .on( 'data', function( tle ) {
             if (id === tle.number.toString() && find === false) {
                 var tles = [tle.line1, tle.line2]
                 find = true;
-                //var info = await getGroundTracks({tle: test ,startTimeMS : Date.now(), stepMS: 6000000,
-                    // isLngLatFormat: true});
                 var info = getSatelliteInfo(tles, Date.now());
                 var orbitType = getOrbitType(info.height);
                 var type = getType(tle.name);
+                console.log(type);
                 return res.json({name:tle.name, date:tle.date, info: info, orbitType: orbitType, type: type});
             }
         })
+        .on('end', function() {
+            if (!find)
+                return (res.json("lol"))
+        });
     }
 
     return {

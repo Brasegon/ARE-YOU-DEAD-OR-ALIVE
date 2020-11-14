@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { authInterceptorProviders } from './api/request/helper.service';
+import { AgmCoreModule } from '@agm/core';
+import { GoogleMapsModule } from '@angular/google-maps'
 
 @NgModule({
   declarations: [
@@ -23,7 +25,11 @@ import { authInterceptorProviders } from './api/request/helper.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    GoogleMapsModule
+    // AgmCoreModule.forRoot({
+    //   apiKey: 'AIzaSyBW3R5kxLgXqCJ9upzPaMAU3HSfFAi8vIk'
+    // })
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

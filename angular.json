@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "areyoudeadoralive"
+    }
+  },
+  "defaultProject": "areyoudeadoralive",
+  "cli": {
+    "analytics": false
+  }
 }
