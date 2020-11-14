@@ -9,7 +9,21 @@ export class SearchComponent implements OnInit {
 
   constructor() { }
 
+  isPrinted = false;
+  id;
+  name = "iss";
+  height = '30';
+  velocity = '40';
+  date = '2018';
+  longitude = '50';
+  latitude = '60';
+
   ngOnInit(): void {
   }
 
+  // tslint:disable-next-line:typedef
+  print_satellite() {
+      this.id = (<HTMLInputElement>document.getElementById("search")).value;
+      this.isPrinted = true;
+  }
 }
